@@ -1,41 +1,4 @@
-﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(519,5): warning MSB8004: Intermediate ディレクトリの末尾がスラッシュではありません。Intermediate ディレクトリが適切に評価されるようにするために、このビルド インスタンスによってスラッシュが追加されます。
-C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(520,5): warning MSB8004: Output ディレクトリの末尾がスラッシュではありません。Output ディレクトリが適切に評価されるようにするために、このビルド インスタンスによってスラッシュが追加されます。
-  CCamera.cpp
-  CCollision.cpp
-  CFont.cpp
-  CFPS.cpp
-  CImage.cpp
-  CInput.cpp
-  CLight.cpp
-  CLoadThread.cpp
-  CMatrix.cpp
-  CModel.cpp
-  CModelA3M.cpp
-C:\AnabukiSchool\GC2_C++\BaseProject\Project\GLLibrary\GLLibrary\CModelA3M.cpp(2954,23): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
-  CModelField.cpp
-  CModelObj.cpp
-C:\AnabukiSchool\GC2_C++\BaseProject\Project\GLLibrary\GLLibrary\CModelObj.cpp(296,5): warning C4267: '初期化中': 'size_t' から 'unsigned int' に変換しました。データが失われているかもしれません。
-  CNetWork.cpp
-  CRect.cpp
-  CResource.cpp
-  CShader.cpp
-C:\AnabukiSchool\GC2_C++\BaseProject\Project\GLLibrary\GLLibrary\CShader.cpp(347,25): warning C4267: '初期化中': 'size_t' から 'int' に変換しました。データが失われているかもしれません。
-  CShadow.cpp
-  CSound.cpp
-  CTexture.cpp
-  コードを生成中...
-  コンパイル中...
-  CTextureFrame.cpp
-C:\AnabukiSchool\GC2_C++\BaseProject\Project\GLLibrary\GLLibrary\CTextureFrame.cpp(102,48): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\BaseProject\Project\GLLibrary\GLLibrary\CTextureFrame.cpp(102,45): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\BaseProject\Project\GLLibrary\GLLibrary\CTextureFrame.cpp(102,75): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\BaseProject\Project\GLLibrary\GLLibrary\CTextureFrame.cpp(102,72): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-  CVector.cpp
-  GL.cpp
-  Utility.cpp
-C:\AnabukiSchool\GC2_C++\BaseProject\Project\GLLibrary\GLLibrary\Utility.cpp(402,10): warning C4244: '初期化中': 'double' から 'float' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\BaseProject\Project\GLLibrary\GLLibrary\Utility.cpp(411,11): warning C4244: '初期化中': 'double' から 'float' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\BaseProject\Project\GLLibrary\GLLibrary\Utility.cpp(412,11): warning C4244: '初期化中': 'double' から 'float' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\BaseProject\Project\GLLibrary\GLLibrary\Utility.cpp(437,67): warning C4244: '引数': 'double' から 'float' への変換です。データが失われる可能性があります。
-  コードを生成中...
-  GLLibrary.vcxproj -> C:\AnabukiSchool\GC2_C++\BaseProject\Project\GLLibrary\Debug\GLLibrary.lib
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(502,5): warning MSB8004: Intermediate ディレクトリの末尾がスラッシュではありません。Intermediate ディレクトリが適切に評価されるようにするために、このビルド インスタンスによってスラッシュが追加されます。
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(503,5): warning MSB8004: Output ディレクトリの末尾がスラッシュではありません。Output ディレクトリが適切に評価されるようにするために、このビルド インスタンスによってスラッシュが追加されます。
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8028: 中間ディレクトリ (G:\Anabuki\GC2_C++\BaseProject\Project\Debug\) に別のプロジェクト (GameProject.vcxproj) と共有されているファイルが含まれています。これにより、クリーンしてリビルド動作が適切に行われない可能性があります。
+  GLLibrary.vcxproj -> G:\Anabuki\GC2_C++\BaseProject\Project\GLLibrary\Debug\GLLibrary.lib
