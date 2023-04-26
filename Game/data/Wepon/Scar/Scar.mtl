@@ -1,0 +1,23 @@
+# Created by Metasequoia
+
+newmtl ACOG_base_01
+Ka 0.35294 0.35294 0.35294
+Kd 0.47059 0.47059 0.47059
+Ks 0.00000 0.00000 0.00000
+Ns 5.00000
+map_Kd Textures\ACOG_D.png
+
+newmtl MI_Scar_L
+Ka 0.35294 0.35294 0.35294
+Kd 0.47059 0.47059 0.47059
+Ks 0.00000 0.00000 0.00000
+Ns 5.00000
+map_Kd Textures\scar-L_01_d.png
+
+newmtl MI_Scar_L.001
+Ka 0.35294 0.35294 0.35294
+Kd 0.47059 0.47059 0.47059
+Ks 0.00000 0.00000 0.00000
+Ns 5.00000
+map_Kd Textures\scar-L_01_d.png
+
