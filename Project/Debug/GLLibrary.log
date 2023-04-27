@@ -1,4 +1,4 @@
-﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(502,5): warning MSB8004: Intermediate ディレクトリの末尾がスラッシュではありません。Intermediate ディレクトリが適切に評価されるようにするために、このビルド インスタンスによってスラッシュが追加されます。
-C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(503,5): warning MSB8004: Output ディレクトリの末尾がスラッシュではありません。Output ディレクトリが適切に評価されるようにするために、このビルド インスタンスによってスラッシュが追加されます。
-C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8028: 中間ディレクトリ (G:\Anabuki\GC2_C++\BaseProject\Project\Debug\) に別のプロジェクト (GameProject.vcxproj) と共有されているファイルが含まれています。これにより、クリーンしてリビルド動作が適切に行われない可能性があります。
-  GLLibrary.vcxproj -> G:\Anabuki\GC2_C++\BaseProject\Project\GLLibrary\Debug\GLLibrary.lib
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(519,5): warning MSB8004: Intermediate ディレクトリの末尾がスラッシュではありません。Intermediate ディレクトリが適切に評価されるようにするために、このビルド インスタンスによってスラッシュが追加されます。
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(520,5): warning MSB8004: Output ディレクトリの末尾がスラッシュではありません。Output ディレクトリが適切に評価されるようにするために、このビルド インスタンスによってスラッシュが追加されます。
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(534,5): warning MSB8028: 中間ディレクトリ (C:\AnabukiSchool\GC2_C++\BaseProject\Project\Debug\) に別のプロジェクト (GameProject.vcxproj) と共有されているファイルが含まれています。これにより、クリーンしてリビルド動作が適切に行われない可能性があります。
+  GLLibrary.vcxproj -> C:\AnabukiSchool\GC2_C++\BaseProject\Project\GLLibrary\Debug\GLLibrary.lib

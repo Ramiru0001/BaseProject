@@ -19,4 +19,5 @@ public:
 public:
 	Player(CVector3D pos);
 	void Update();
+	void Render();
 };

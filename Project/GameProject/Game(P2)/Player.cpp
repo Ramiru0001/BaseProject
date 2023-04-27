@@ -13,6 +13,13 @@ void Player::Update() {
 	}
 	//ベクトルを期化
 	key_dir = CVector3D(0, 0, 0);
+	//ゲームパッド0番があれば
+	if (CInput::GetPadData(0)) {
+		//左スティックの状態を取得
+		CVector2D axis = CInput::GetLStick(0);
+		//キャラクター移動キーに調整
+		key_dir = CVector3D(-axis.x, 0, axis.y);
+	}
 	//キーボード入力の場合
 	if (HOLD(CInput::eLeft)) {
 		key_dir.x = 1;
@@ -21,10 +28,10 @@ void Player::Update() {
 		key_dir.x = -1;
 	}
 	if (HOLD(CInput::eUp)) {
-		key_dir.y = 1;
+		key_dir.z = 1;
 	}
 	if (HOLD(CInput::eDown)) {
-		key_dir.y = -1;
+		key_dir.z = -1;
 	}
 	//入力があれば
 	if (key_dir.LengthSq() > 0.1) {
