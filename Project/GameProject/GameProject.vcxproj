@@ -15,7 +15,7 @@
     <ClInclude Include="Global.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="09_Effect_Particle.cpp" />
+    <ClCompile Include="09_Effect_Test.cpp" />
     <ClCompile Include="Base\Base.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

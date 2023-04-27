@@ -2,6 +2,7 @@
 //グローバル変数領域
 //-------------------------------------------
 
+
 //モーション無しクラス
 CModelObj model;
 //座標
@@ -94,7 +95,7 @@ void MainLoop(void) {
 	//マテリアル（アルファ値）の設定
 	model.GetMaterial(0)->m_alpha = alpha;
 	//加算ブレンド
-	glBlendFunc(GL_SRC_ALPHA, GL_ONE);
+	//glBlendFunc(GL_SRC_ALPHA, GL_ONE);
 	//深度書き込みOFF
 	glDepthMask(GL_FALSE);
 	//ライティングOFF
@@ -105,13 +106,18 @@ void MainLoop(void) {
 	//ライティングON
 	CLight::SetLighting(true);
 	//深度書き込みON
-	glDepthMask(GL_TRUE);
+	//glDepthMask(GL_TRUE);
 	//通常ブレンドモードに
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
+
+
+
 	//世界の軸を表示
 	Utility::DrawLine(CVector3D(0, 0, 0), CVector3D(100, 0, 0), CVector4D(1, 0, 0, 1));
 	Utility::DrawLine(CVector3D(0, 0, 0), CVector3D(0, 100, 0), CVector4D(0, 1, 0, 1));
 	Utility::DrawLine(CVector3D(0, 0, 0), CVector3D(0, 0, 100), CVector4D(0, 0, 1, 1));
+
 	for (int i = -5; i <= 5; i++) {
 		Utility::DrawLine(CVector3D(-5, 0, i * 1.0f), CVector3D(5, 0, i * 1.0f), CVector4D(0.2, 0.2, 0.2, 1));
 		Utility::DrawLine(CVector3D(i * 1.0f, 0, -5), CVector3D(i * 1.0f, 0, 5), CVector4D(0.2, 0.2, 0.2, 1));
@@ -122,15 +128,19 @@ void MainLoop(void) {
 void Init(void)
 {
 	glClearColor(1.0, 1.0, 1.0, 1.0);
+
 	glEnable(GL_DEPTH_TEST);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 	glEnable(GL_BLEND);//ブレンドの有効化
 	glEnable(GL_CULL_FACE);
 	glCullFace(GL_BACK);
+
 	//固定シェーダー用
 	glEnable(GL_LIGHTING);
 	glEnable(GL_LIGHT0);
+
 	glEnable(GL_ALPHA_TEST);
+
 	CFPS::SetFPS(60);
 	//フレーム制御初期化
 	CFPS::Init();
@@ -155,64 +165,88 @@ void Init(void)
 	//	CInput::SetMouseInside(true);
 	CInput::Update();
 	CInput::Update();
+
+
 	//ライト設定
 	CLight::SetType(0, CLight::eLight_Direction);
 	CLight::SetPos(0, CVector3D(0, 200, 200));
 	CLight::SetDir(0, CVector3D(-1, -2, 1).GetNormalize());
 	CLight::SetColor(0, CVector3D(0.2f, 0.2f, 0.2f), CVector3D(0.8f, 0.8f, 0.8f));
+
+
 	CLight::SetFogParam(CVector4D(1, 1, 1, 1), 700, 800);
+
 	//カメラ初期化
 	CCamera::GetCamera()->LookAt(CVector3D(5, 5, 5),
-	CVector3D(0, 0, 0),
-	CVector3D(0.0, 1.0, 0.0));
+		CVector3D(0, 0, 0),
+		CVector3D(0.0, 1.0, 0.0));
+
 	SetCurrentDirectory("data");
+
+
 	CShader::GetInstance("StaticMesh");
 	CShader::GetInstance("SkinMesh");
 	CSound::GetInstance();
+
 	SetCurrentDirectory("data");
+
+
 	//-----------------------------------------------------
 	//初期化の命令を書く
 	//ゲーム起動時に一度だけ呼ばれる
 	//-----------------------------------------------------
+
+
 	ADD_RESOURCE("Effect", CModel::CreateModel("Effect/Bomb.obj"));
 	model = COPY_RESOURCE("Effect", CModelObj);
 }
+
+
 void Release()
 {
 	CLoadThread::ClearInstance();
 	CSound::ClearInstance();
 	CResourceManager::ClearInstance();
 }
+
 static void ResizeCallback(GLFWwindow* window, int w, int h)
 {
 	glViewport(0, 0, w, h);
+
 	//画面解像度変動
 	CCamera::GetCamera()->SetSize((float)w, (float)h);
 	//画面解像度固定
 	//CCamera::GetCamera()->SetSize(SCREEN_WIDTH, SCREEN_HEIGHT);
+
 	CCamera::GetCamera()->Viewport(0, 0, w, h);
 	CCamera::GetCurrent()->Perspective(DtoR(45.0), (float)w / (float)h, 1.0, 10000.0);
+	
 	glfwGetWindowPos(window, &GL::window_x, &GL::window_y);
 	GL::UpdateWindowRect(GL::window_x, GL::window_y, w, h);
 	CInput::UpdateClipCursor(true);
+
 }
 static void WheelCallback(GLFWwindow* _window, double _offsetx, double _offsety) {
 	CInput::AddMouseWheel((int)_offsety);
+
 }
 static void PosCallback(GLFWwindow* _window, int x, int y) {
 	GL::window_x = x;
 	GL::window_y = y;
 	GL::UpdateWindosRect(x, y, GL::window_width, GL::window_height);
 	CInput::UpdateClipCursor(true);
+
 }
 static void FocusCallback(GLFWwindow* _window, int f) {
 	CInput::UpdateClipCursor(f);
 	GL::focus = f;
 }
+
 static void error_callback(int error, const char* description)
 {
 	printf("Error: %s\n", description);
 }
+
 //フルスクリーン?ウインドウモードの切り替え
 //Alt+Enterで切り替える
 void CheckFullScreen() {
@@ -222,21 +256,27 @@ void CheckFullScreen() {
 		GL::ChangeFullScreen(!GL::full_screen);
 	}
 }
+
 int __main(int* argcp, char** argv) {
 	// メモリリーク検出
 	//	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF | _CRTDBG_CHECK_ALWAYS_DF);
 	//_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
-	// 
+
+
 	//OpenGL4.3
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+
+
 	glfwSetErrorCallback(error_callback);
 	if (!glfwInit()) return -1;
 	//	glutInit(argcp, argv);
+
 	GL::window = glfwCreateWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Simple", nullptr, nullptr);
 	glfwGetWindowSize(GL::window, &GL::window_width, &GL::window_height);
 	glfwGetWindowPos(GL::window, &GL::window_x, &GL::window_y);
+
 	glfwSetFramebufferSizeCallback(GL::window, ResizeCallback);
 	glfwSetScrollCallback(GL::window, WheelCallback);
 	glfwSetWindowFocusCallback(GL::window, FocusCallback);
@@ -245,6 +285,7 @@ int __main(int* argcp, char** argv) {
 		glfwTerminate();
 		return -1;
 	}
+
 	glfwMakeContextCurrent(GL::window);
 	glfwSwapInterval(1);
 	ResizeCallback(GL::window, SCREEN_WIDTH, SCREEN_HEIGHT);
