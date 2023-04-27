@@ -7,8 +7,8 @@ C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\09_Effect_Test.cpp(221,
 GLFW.lib(init.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(init.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(window.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(window.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(input.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(input.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-GLFW.lib(context.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(context.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
   glew.lib(glew.obj) : MSIL .netmodule または /GL を伴ってコンパイルされたモジュールが見つかりました。/LTCG を使用して再開始してください。リンカーのパフォーマンスを向上させるためには、コマンドラインに /LTCG を追加してください。
+GLFW.lib(context.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(context.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(win32_init.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(win32_init.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(win32_monitor.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(win32_monitor.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(win32_time.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(win32_time.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
