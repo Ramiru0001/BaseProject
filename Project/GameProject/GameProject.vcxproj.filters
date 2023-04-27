@@ -2,12 +2,6 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClInclude Include="Global.h" />
-    <ClInclude Include="Game(P2)\FollowCamera.h">
-      <Filter>Game</Filter>
-    </ClInclude>
-    <ClInclude Include="Game(P2)\Player.h">
-      <Filter>Game</Filter>
-    </ClInclude>
     <ClInclude Include="Base\Base.h">
       <Filter>Base</Filter>
     </ClInclude>
@@ -21,16 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Game(P2)\FollowCamera.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
-    <ClCompile Include="Game(P2)\Player.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
     <ClCompile Include="Base\Base.cpp">
       <Filter>Base</Filter>
     </ClCompile>
-    <ClCompile Include="08_Practice2.cpp">
+    <ClCompile Include="09_Effect_Particle.cpp">
       <Filter>Game</Filter>
     </ClCompile>
   </ItemGroup>

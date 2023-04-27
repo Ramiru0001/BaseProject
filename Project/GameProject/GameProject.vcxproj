@@ -12,15 +12,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Base\Base.h" />
-    <ClInclude Include="Game(P2)\FollowCamera.h" />
-    <ClInclude Include="Game(P2)\Player.h" />
     <ClInclude Include="Global.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="08_Practice2.cpp" />
+    <ClCompile Include="09_Effect_Particle.cpp" />
     <ClCompile Include="Base\Base.cpp" />
-    <ClCompile Include="Game(P2)\FollowCamera.cpp" />
-    <ClCompile Include="Game(P2)\Player.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{FE2CE3B1-49BF-46A5-9DB1-9BD5B52FE1A0}</ProjectGuid>
