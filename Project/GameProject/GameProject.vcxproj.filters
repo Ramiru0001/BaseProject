@@ -18,7 +18,7 @@
     <ClCompile Include="Base\Base.cpp">
       <Filter>Base</Filter>
     </ClCompile>
-    <ClCompile Include="09_Effect_Test.cpp">
+    <ClCompile Include="09_Effect_Particle.cpp">
       <Filter>Game</Filter>
     </ClCompile>
   </ItemGroup>

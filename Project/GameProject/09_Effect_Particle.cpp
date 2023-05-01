@@ -67,8 +67,17 @@ public:
 	/// <param name="blend">ブレンド方法</param>
 	/// <param name="builbord">ビルボード描画</param>
 	/// <param name="time">生存時間</param>
-	ParticleEffect(float time) : Effect(time){
-
+	ParticleEffect(const char* model, const CVector3D& pos, const CVector3D& vec, const CVector3D& accel, float scale, float change_scale, float alpha, float change_alpha, bool blend,bool builbord, int time = -1) : Effect(time), m_alpha(alpha),
+		m_vec_accel(accel),
+		m_scale(scale),
+		m_scale_speed(change_scale), 
+		m_alpha_speed(change_alpha), 
+		m_blend(blend), 
+		m_builbord(builbord),
+		m_time(time) {
+		m_pos = pos;
+		m_vec = vec;
+		m_model = COPY_RESOURCE(model, CModelObj);
 	}
 	/// <summary>
 	/// デストラクタ
@@ -80,13 +89,46 @@ public:
 	/// 更新
 	/// </summary>
 	void Update() {
-
+		m_vec += m_vec_accel;
+		m_pos += m_vec;
+		m_rot += m_rot_vec;
+		m_scale += m_scale_speed;
+		m_alpha += m_alpha_speed;
+		if (m_time > 0)m_time--;
+		if (m_alpha < 0 || m_scale < 0 || m_time == 0)SetKill();
 	}
 	/// <summary>
 	/// 描画
 	/// </summary>
 	void Render() {
+		CLight::SetLighting(false);
+		//速度バッファへの書き込みOFF
+		glDepthMask(GL_FALSE);
+		switch (m_blend) {
+		case eBlendAlpha:
+			//通常ブレンドモードに
+			glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+			break;
+		case eBlendAdd:
+			//加算ブレンドモードに
+			glBlendFunc(GL_SRC_ALPHA, GL_ONE);
+		}
+		//座標設定
+		m_model.SetPos(m_pos);
+		m_model.GetMaterial(0)->m_alpha = m_alpha;
+		//スケール設定
+		m_model.SetScale(m_scale, m_scale, m_scale);
+		//回転値設定
+		m_model.SetRot(m_rot);
+		if (m_builbord)
+			//ビルボード描画
+			m_model.RenderBuilbord(CCamera::GetCurrent()->GetBuilbordMatrix());
+		else
+			m_model.Render();
 
+		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+		glDepthMask(GL_TRUE);
+		CLight::SetLighting(true);
 	}
 };
 class MagicEffect : public Effect {
@@ -103,9 +145,12 @@ public:
 	/// <param name="rot">初期回転値</param>
 	/// <param name="scale">大きさ</param>
 	/// <param name="time">生存時間</param>
-	MagicEffect(float time) :Effect(time) {
-
-
+	MagicEffect(const char* model,const CVector3D& pos,const CVector3D& rot,float scale,float time) :Effect(time) {
+		m_pos = pos;
+		m_rot = rot;
+		m_scale - scale;
+		m_alpha = 1.0f;
+		m_model = COPY_RESOURCE(model, CModelObj);
 	}
 	/// <summary>
 	/// デストラクタ
@@ -116,15 +161,32 @@ public:
 	/// 更新
 	/// </summary>
 	void Update(){
-
-		
+		m_time--;
+		//残り３０Fから徐々に消える
+		if (m_time < 30) {
+			m_alpha -= 1.0f / 30;
+		}
+		//削除
+		if (m_time <= 0) {
+			SetKill();
+		}
+		//回転
+		m_rot.y += DtoR(1.0f);
 	}
 	
 	/// <summary>
 	/// 描画
 	/// </summary>
 	void Render() {
-
+		CLight::SetLighting(false);
+		glDepthMask(GL_FALSE);
+		m_model.SetRot(m_rot);
+		m_model.SetPos(m_pos);
+		m_model.SetScale(m_scale, m_scale, m_scale);
+		m_model.GetMaterial(0)->m_alpha = m_alpha;
+		m_model.Render();
+		glDepthMask(GL_TRUE);
+		CLight::SetLighting(true);
 	}
 };
 class UVEffect : public Effect {
@@ -144,9 +206,13 @@ public:
 	/// <param name="scale">大きさ</param>
 	/// <param name="vec">UV移動量</param>
 	/// <param name="time">生存時間</param>
-	UVEffect(float time)
-		:Effect(time){
-
+	UVEffect(const char* model,const CVector3D& pos,const CVector3D& rot,float scale,const CVector2D& vec,float time)
+		:Effect(time),m_st(0,0),m_st_vec(vec) {
+		m_pos = pos;
+		m_scale = scale;
+		m_rot = rot;
+		m_alpha = 1.0f;
+		m_model = COPY_RESOURCE(model, CModelObj);
 	}
 	/// <summary>
 	/// デストラクタ
@@ -158,14 +224,24 @@ public:
 	/// 更新
 	/// </summary>
 	void Update(){
-
-
+		m_time--;
+		//UVスライド
+		m_st += m_st_vec;
+		//削除
+		if (m_time <= 0) {
+			SetKill();
+		}
 	}
 	/// <summary>
 	/// 描画
 	/// </summary>
 	void Render(){
-
+		CLight::SetLighting(false);
+		glDepthMask(GL_FALSE);
+		m_model.SetRot(m_rot);
+		m_model.SetPos(m_pos);
+		m_model.SetScale(m_scale, m_scale, m_scale);
+		m_model.GetMaterial(0)->m_alpha=m_
 	}
 };
 
@@ -197,11 +273,16 @@ void MainLoop(void) {
 		for (int i = 0; i < 5; i++) {
 			const float speed = 0.002f;
 			CVector3D vec(Utility::Rand(-speed, speed), Utility::Rand(0.0f, speed), Utility::Rand(-speed, speed));
-			//m_list.push_back(new CParticleEffect("Bomb", CVector3D(0, 0, 0), vec, CVector3D(0, 0, 0), 1.0, 0.05f, 1.0f,-0.02f, CParticleEffect::eBlendAdd, true));
+			m_list.push_back(new ParticleEffect("Bullet", CVector3D(0, 0, 0), vec, CVector3D(0, 0, 0), 2.0, 0.05f, 1.0f, -0.02f, ParticleEffect::eBlendAdd, true));
+
+			m_list.push_back(new ParticleEffect("SmokeB", CVector3D(0, 0, 0), vec, CVector3D(0, 0.002, 0), 1.5, 0.1f, 0.5f, -0.02f, ParticleEffect::eBlendAlpha, true));
+
+			m_list.push_back(new ParticleEffect("Bomb", CVector3D(0, 0, 0), vec, CVector3D(0, 0, 0), 1.0, 0.05f, 1.0f, -0.02f, ParticleEffect::eBlendAdd, true));
 		}
 	}
 	if (PUSH(CInput::eButton2)) {
-
+		m_list.push_back(
+			new MagicEffect("CircleR",CVector3D(0,0,0),CVector3D(DtoR(90),0,0),10.0,120));
 	}
 
 	if (PUSH(CInput::eButton3)) {
