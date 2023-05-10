@@ -131,7 +131,7 @@ void MainLoop(void) {
 	}
 	{//■ターゲットの座標に名前を表示する（ワールド座標→スクリーン座標）
 		CVector3D pos2D;
-
+		pos2D = CInput::GetMousePoint();
 		
 		//文字の表示
 		FONT_T()->Draw(pos2D.x, pos2D.y, 1, 0, 0, "Target");

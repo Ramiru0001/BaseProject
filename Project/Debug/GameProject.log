@@ -1,14 +1,17 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(534,5): warning MSB8028: 中間ディレクトリ (C:\AnabukiSchool\GC2_C++\BaseProject\Project\Debug\) に別のプロジェクト (GLLibrary.vcxproj) と共有されているファイルが含まれています。これにより、クリーンしてリビルド動作が適切に行われない可能性があります。
-  09_Effect_Particle.cpp
-C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\09_Effect_Particle.cpp(70,220): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\09_Effect_Particle.cpp(151,11): warning C4552: '-': 式の結果が使用されていません
-C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\09_Effect_Particle.cpp(266,96): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\09_Effect_Particle.cpp(288,46): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\09_Effect_Particle.cpp(288,72): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\09_Effect_Particle.cpp(324,102): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\09_Effect_Particle.cpp(325,102): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\09_Effect_Particle.cpp(431,42): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\09_Effect_Particle.cpp(431,39): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+  main_11_Lerp.cpp
+C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\main_11_Lerp.cpp(75,16): warning C4244: '初期化中': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\main_11_Lerp.cpp(88,18): warning C4244: '=': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\main_11_Lerp.cpp(94,35): warning C4244: '引数': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\main_11_Lerp.cpp(94,20): warning C4244: '引数': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\main_11_Lerp.cpp(181,49): warning C4244: '引数': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\main_11_Lerp.cpp(181,32): warning C4244: '引数': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\main_11_Lerp.cpp(207,47): warning C4244: '引数': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\main_11_Lerp.cpp(207,31): warning C4244: '引数': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\main_11_Lerp.cpp(286,102): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\main_11_Lerp.cpp(287,102): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\main_11_Lerp.cpp(401,42): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\main_11_Lerp.cpp(401,39): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
 GLFW.lib(init.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(init.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(window.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(window.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(input.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(input.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
@@ -43,6 +46,39 @@ GLFW.lib(win32_tls.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(win32_tl
 GLFW.lib(win32_joystick.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(win32_joystick.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(wgl_context.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(wgl_context.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(egl_context.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(egl_context.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+ftgl_static_D.lib(FTFont.obj) : warning LNK4099: PDB 'ftgl_static.pdb' が 'ftgl_static_D.lib(FTFont.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\ftgl_static.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+ftgl_static_D.lib(FTPixmapFont.obj) : warning LNK4099: PDB 'ftgl_static.pdb' が 'ftgl_static_D.lib(FTPixmapFont.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\ftgl_static.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+ftgl_static_D.lib(FTSize.obj) : warning LNK4099: PDB 'ftgl_static.pdb' が 'ftgl_static_D.lib(FTSize.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\ftgl_static.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+ftgl_static_D.lib(FTFace.obj) : warning LNK4099: PDB 'ftgl_static.pdb' が 'ftgl_static_D.lib(FTFace.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\ftgl_static.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+ftgl_static_D.lib(FTGlyphContainer.obj) : warning LNK4099: PDB 'ftgl_static.pdb' が 'ftgl_static_D.lib(FTGlyphContainer.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\ftgl_static.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+ftgl_static_D.lib(FTPixmapGlyph.obj) : warning LNK4099: PDB 'ftgl_static.pdb' が 'ftgl_static_D.lib(FTPixmapGlyph.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\ftgl_static.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+ftgl_static_D.lib(FTLibrary.obj) : warning LNK4099: PDB 'ftgl_static.pdb' が 'ftgl_static_D.lib(FTLibrary.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\ftgl_static.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+ftgl_static_D.lib(FTCharmap.obj) : warning LNK4099: PDB 'ftgl_static.pdb' が 'ftgl_static_D.lib(FTCharmap.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\ftgl_static.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+ftgl_static_D.lib(FTGlyph.obj) : warning LNK4099: PDB 'ftgl_static.pdb' が 'ftgl_static_D.lib(FTGlyph.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\ftgl_static.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(ftbase.obj) : warning LNK4099: PDB 'freetyped.pdb' が 'freetyped.lib(ftbase.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\freetyped.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(ftinit.obj) : warning LNK4099: PDB 'freetyped.pdb' が 'freetyped.lib(ftinit.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\freetyped.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(ftsystem.obj) : warning LNK4099: PDB 'freetyped.pdb' が 'freetyped.lib(ftsystem.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\freetyped.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(autofit.obj) : warning LNK4099: PDB 'freetyped.pdb' が 'freetyped.lib(autofit.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\freetyped.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(truetype.obj) : warning LNK4099: PDB 'freetyped.pdb' が 'freetyped.lib(truetype.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\freetyped.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(type1.obj) : warning LNK4099: PDB 'freetyped.pdb' が 'freetyped.lib(type1.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\freetyped.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(cff.obj) : warning LNK4099: PDB 'freetyped.pdb' が 'freetyped.lib(cff.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\freetyped.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(type1cid.obj) : warning LNK4099: PDB 'freetyped.pdb' が 'freetyped.lib(type1cid.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\freetyped.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(pfr.obj) : warning LNK4099: PDB 'freetyped.pdb' が 'freetyped.lib(pfr.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\freetyped.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(type42.obj) : warning LNK4099: PDB 'freetyped.pdb' が 'freetyped.lib(type42.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\freetyped.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(winfnt.obj) : warning LNK4099: PDB 'freetyped.pdb' が 'freetyped.lib(winfnt.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\freetyped.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(pcf.obj) : warning LNK4099: PDB 'freetyped.pdb' が 'freetyped.lib(pcf.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\freetyped.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(bdf.obj) : warning LNK4099: PDB 'freetyped.pdb' が 'freetyped.lib(bdf.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\freetyped.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(psaux.obj) : warning LNK4099: PDB 'freetyped.pdb' が 'freetyped.lib(psaux.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\freetyped.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(psnames.obj) : warning LNK4099: PDB 'freetyped.pdb' が 'freetyped.lib(psnames.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\freetyped.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(pshinter.obj) : warning LNK4099: PDB 'freetyped.pdb' が 'freetyped.lib(pshinter.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\freetyped.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(sfnt.obj) : warning LNK4099: PDB 'freetyped.pdb' が 'freetyped.lib(sfnt.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\freetyped.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(smooth.obj) : warning LNK4099: PDB 'freetyped.pdb' が 'freetyped.lib(smooth.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\freetyped.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(raster.obj) : warning LNK4099: PDB 'freetyped.pdb' が 'freetyped.lib(raster.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\freetyped.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(sdf.obj) : warning LNK4099: PDB 'freetyped.pdb' が 'freetyped.lib(sdf.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\freetyped.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(ftgzip.obj) : warning LNK4099: PDB 'freetyped.pdb' が 'freetyped.lib(ftgzip.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\freetyped.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(ftlzw.obj) : warning LNK4099: PDB 'freetyped.pdb' が 'freetyped.lib(ftlzw.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\freetyped.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(ftbitmap.obj) : warning LNK4099: PDB 'freetyped.pdb' が 'freetyped.lib(ftbitmap.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\freetyped.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(ftdebug.obj) : warning LNK4099: PDB 'freetyped.pdb' が 'freetyped.lib(ftdebug.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\freetyped.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 alut.lib(alutInit.obj) : warning LNK4099: PDB 'alut.pdb' が 'alut.lib(alutInit.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\alut.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 alut.lib(alutLoader.obj) : warning LNK4099: PDB 'alut.pdb' が 'alut.lib(alutLoader.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\alut.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 alut.lib(alutError.obj) : warning LNK4099: PDB 'alut.pdb' が 'alut.lib(alutError.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\alut.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
@@ -71,6 +107,9 @@ glpngd.lib(infutil.obj) : warning LNK4099: PDB 'glpng.pdb' が 'glpngd.lib(infut
 glpngd.lib(inftrees.obj) : warning LNK4099: PDB 'glpng.pdb' が 'glpngd.lib(inftrees.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\glpng.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 glpngd.lib(infcodes.obj) : warning LNK4099: PDB 'glpng.pdb' が 'glpngd.lib(infcodes.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\glpng.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 glpngd.lib(inffast.obj) : warning LNK4099: PDB 'glpng.pdb' が 'glpngd.lib(inffast.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\glpng.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+LINK : warning LNK4286: シンボル '??0FTPoint@@QEAA@XZ (public: __cdecl FTPoint::FTPoint(void))' ('ftgl_static_D.lib(FTFont.obj)' で定義) が 'GLLibrary.lib(CFont.obj)' によってインポートされています
+LINK : warning LNK4286: シンボル '??0FTPixmapFont@@QEAA@PEBD@Z (public: __cdecl FTPixmapFont::FTPixmapFont(char const *))' ('ftgl_static_D.lib(FTPixmapFont.obj)' で定義) が 'GLLibrary.lib(CFont.obj)' によってインポートされています
+LINK : warning LNK4286: シンボル '??1FTPixmapFont@@UEAA@XZ (public: virtual __cdecl FTPixmapFont::~FTPixmapFont(void))' ('ftgl_static_D.lib(FTPixmapFont.obj)' で定義) が 'GLLibrary.lib(CFont.obj)' によってインポートされています
 LINK : warning LNK4286: シンボル 'alcCreateContext' ('OpenAL32.lib(ALc.obj)' で定義) が 'alut.lib(alutInit.obj)' によってインポートされています
 LINK : warning LNK4286: シンボル 'alcMakeContextCurrent' ('OpenAL32.lib(ALc.obj)' で定義) が 'alut.lib(alutInit.obj)' によってインポートされています
 LINK : warning LNK4286: シンボル 'alcDestroyContext' ('OpenAL32.lib(ALc.obj)' で定義) が 'alut.lib(alutInit.obj)' によってインポートされています

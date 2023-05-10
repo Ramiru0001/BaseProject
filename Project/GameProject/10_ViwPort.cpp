@@ -33,20 +33,26 @@ void MainLoop(void) {
 	model.UpdateAnimation();
 
 	//それぞれのカメラの位置と回転値
-	CVector3D cam_pos[2] = { CVector3D(0, 10, 10),CVector3D(0, 10, 0) };
-	CVector3D cam_rot[2] = { CVector3D(DtoR(45), DtoR(180), 0),CVector3D(DtoR(90), DtoR(180), 0) };
+	CVector3D cam_pos[4] = { CVector3D(-5, 7, 5),CVector3D(0, 10, 0),CVector3D(0, 0, 10),CVector3D(10, 0, 0) };
+	CVector3D cam_rot[4] = { CVector3D(DtoR(45), DtoR(135), 0),CVector3D(DtoR(90), DtoR(180), 0),CVector3D(DtoR(0), DtoR(180), 0),CVector3D(DtoR(0), DtoR(270), 0) };
 	//画面サイズ(ビューポートに使用)
-	CRect rect[2] = {
+	CRect rect[4] = {
 		//         (x,y),       (w,h)
 		CRect(
-			CVector2D(0,0),
-			CVector2D(SCREEN_WIDTH / 2,SCREEN_HEIGHT)),
+			CVector2D(SCREEN_WIDTH / 2,SCREEN_HEIGHT / 2),
+			CVector2D(SCREEN_WIDTH / 2,SCREEN_HEIGHT / 2)),
 		CRect(
 			CVector2D(SCREEN_WIDTH / 2,0),
-			CVector2D(SCREEN_WIDTH / 2,SCREEN_HEIGHT))
+			CVector2D(SCREEN_WIDTH / 2,SCREEN_HEIGHT / 2)),
+		CRect(
+			CVector2D(0,SCREEN_HEIGHT / 2),
+			CVector2D(SCREEN_WIDTH / 2,SCREEN_HEIGHT / 2)),
+		CRect(
+			CVector2D(0,0),
+			CVector2D(SCREEN_WIDTH / 2,SCREEN_HEIGHT / 2)),
 	};
 
-	for (int i = 0; i < 2; i++) {
+	for (int i = 0; i < 4; i++) {
 
 		//■ビュー行列
 		//カメラを設定

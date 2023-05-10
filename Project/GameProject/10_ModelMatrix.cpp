@@ -49,7 +49,8 @@ void MainLoop(void) {
 
 
 	CMatrix mat;							//モデル行列
-	mat = t;								//行列の積
+	mat = t * r * s;
+	//行列の積
 
 	//モデル行列を指定して描画描画
 	model.Render(mat);
@@ -70,7 +71,7 @@ void MainLoop(void) {
 	//孫
 	static float c3_rot_y = DtoR(0);
 	c3_rot_y += DtoR(1.0f);
-	CMatrix c3_mat = CMatrix::MTranselate(0, 0, 2.0f);
+	CMatrix c3_mat = c1_mat * CMatrix::MRotationY(c3_rot_y) * CMatrix::MTranselate(0, 0, 4.0f);
 	Utility::DrawSphere(c3_mat, 0.5, CVector4D(0, 1, 0, 1));
 //------------------------------------------------
 
