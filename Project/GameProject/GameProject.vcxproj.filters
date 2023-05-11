@@ -18,7 +18,7 @@
     <ClCompile Include="Base\Base.cpp">
       <Filter>Base</Filter>
     </ClCompile>
-    <ClCompile Include="main_11_Lerp.cpp">
+    <ClCompile Include="12_TPS.cpp">
       <Filter>Game</Filter>
     </ClCompile>
   </ItemGroup>

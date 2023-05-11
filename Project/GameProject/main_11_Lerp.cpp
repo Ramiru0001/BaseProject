@@ -123,9 +123,6 @@ void LerpEuler() {
 	//補間後は-π(-180)～π(180)の範囲に角度を整える
 	rot.y = Utility::NormalizeAngle(rot.y);
 	//--------------------------------------------------------
-
-
-
 }
 CModelObj rl_model;
 //ランチャー位置
@@ -181,11 +178,11 @@ void Missile::Update() {
 		CVector3D target = CVector3D(-asin(v.y), atan2(v.x, v.z), 0);
 
 		//一定量回転による角度補間
-		m_rot.y = LerpAngle1(m_rot.y, target.y, DtoR(1));
-		m_rot.x = LerpAngle1(m_rot.x, target.x, DtoR(1));
+		//m_rot.y = LerpAngle1(m_rot.y, target.y, DtoR(1));
+		//m_rot.x = LerpAngle1(m_rot.x, target.x, DtoR(1));
 		//割合による補間
-		//m_rot.y = LerpAngle2(m_rot.y, target.y, 0.1f);
-		//m_rot.x = LerpAngle2(m_rot.x, target.x, 0.1f);
+		m_rot.y = LerpAngle2(m_rot.y, target.y, 0.1f);
+		m_rot.x = LerpAngle2(m_rot.x, target.x, 0.1f);
 	}
 	float move_speed = 0.05f;
 	m_pos += CMatrix::MRotation(m_rot).GetFront() * move_speed;

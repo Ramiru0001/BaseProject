@@ -1,17 +1,11 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(534,5): warning MSB8028: 中間ディレクトリ (C:\AnabukiSchool\GC2_C++\BaseProject\Project\Debug\) に別のプロジェクト (GLLibrary.vcxproj) と共有されているファイルが含まれています。これにより、クリーンしてリビルド動作が適切に行われない可能性があります。
-  main_11_Lerp.cpp
-C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\main_11_Lerp.cpp(75,16): warning C4244: '初期化中': 'double' から 'float' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\main_11_Lerp.cpp(88,18): warning C4244: '=': 'double' から 'float' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\main_11_Lerp.cpp(94,35): warning C4244: '引数': 'double' から 'float' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\main_11_Lerp.cpp(94,20): warning C4244: '引数': 'double' から 'float' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\main_11_Lerp.cpp(181,49): warning C4244: '引数': 'double' から 'float' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\main_11_Lerp.cpp(181,32): warning C4244: '引数': 'double' から 'float' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\main_11_Lerp.cpp(207,47): warning C4244: '引数': 'double' から 'float' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\main_11_Lerp.cpp(207,31): warning C4244: '引数': 'double' から 'float' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\main_11_Lerp.cpp(286,102): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\main_11_Lerp.cpp(287,102): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\main_11_Lerp.cpp(401,42): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\main_11_Lerp.cpp(401,39): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+  12_TPS.cpp
+C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\12_TPS.cpp(34,57): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\12_TPS.cpp(114,34): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\12_TPS.cpp(126,102): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\12_TPS.cpp(127,102): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\12_TPS.cpp(226,42): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\12_TPS.cpp(226,39): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
 GLFW.lib(init.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(init.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(window.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(window.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(input.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(input.obj)' で、または 'C:\AnabukiSchool\GC2_C++\BaseProject\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
