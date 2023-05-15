@@ -4,6 +4,7 @@
 
 bool ads = false;
 CVector3D cam_rot(DtoR(45), 0, 0);
+CVector3D cam_pos;
 //プレイヤー用人形モデル
 CModelA3M p_model;
 //回転値
@@ -17,9 +18,10 @@ CVector3D key_dir(0, 0, 0);
 const float move_speed = 0.1f;
 //回転速度
 float rot_speed = DtoR(5.0f);
+
 //1人称カメラなど
 void UpdateCamera() {
-
+	cam_pos = CVector3D(p_pos.x, p_pos.y + 2, p_pos.z);
 	//回転速度係数
 	float cam_speed = 0.002f;
 
@@ -29,21 +31,18 @@ void UpdateCamera() {
 	cam_rot += CVector3D(mouse_vec.y, -mouse_vec.x, 0) * cam_speed;
 	//上下角度制限
 	cam_rot.x = min(DtoR(45), max(DtoR(-45), cam_rot.x));
-
-	//カメラ位置と回転値を反映
-	CCamera::GetCurrent()->SetTranseRot(CVector3D(0, 1.8, 0), cam_rot);
-
 	if (ads) {
 		//一人称
+		//カメラ位置と回転値を反映
+		CCamera::GetCurrent()->SetTranseRot(p_pos + CVector3D(0, 1.8, 0), cam_rot);
 		
 	} else {
-
-
+		//キャラクターの右肩越しにカメラを設置する
+		CMatrix cam_matrix = CMatrix::MTranselate(p_pos) * CMatrix::MTranselate(CVector3D(0, 1.5, 0)) * CMatrix::MRotation(cam_rot) * CMatrix::MTranselate(CVector3D(-0.5, 0.2, -2));
+		//カメラを位置で行列で設定
+		CCamera::GetCurrent()->SetTranseRot(cam_matrix);
 	}
-	
-
 }
-
 void MainLoop(void) {
 
 	//--------------------------------------------------------------
@@ -103,7 +102,7 @@ void MainLoop(void) {
 	}
 
 	//カメラ操作
-	//UpdateCamera();
+	UpdateCamera();
 
 
 	
@@ -116,6 +115,8 @@ void MainLoop(void) {
 	p_model.SetRot(p_rot);
 	//座標設定
 	p_model.SetPos(p_pos);
+	//胸のボーンを部分的に動かす
+	p_model.BindFrameMatrix(5, CMatrix::MRotation(cam_rot));
 	//描画
 	p_model.Render();
 	//世界の軸を表示
