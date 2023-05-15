@@ -171,7 +171,10 @@ void MainLoop(void) {
 	//武器のワールド行列=ボーンの行列　×　武器のローカル行列（平行移動×回転×スケール）
 	if (sw) {
 		//TPS
-
+		//武器の行列　手のボーン行列を取得する
+		gun_matrix = model.GetFrameMatrix(31)*CMatrix::MTranselate(-18.00f,-5.00f,8.600)*CMatrix::MRotationX(DtoR(0))*CMatrix::MRotationY(DtoR(- 90))*CMatrix::MRotationZ(DtoR(-90))*CMatrix::MScale(1.0f,1.0f,1.0f);
+		//行列を指定して描画
+		gun_model.Render(gun_matrix);
 
 	}else{
 		//ACT
@@ -179,12 +182,8 @@ void MainLoop(void) {
 
 	}
 	//行列を指定して描画
-
-
-
-
-
-
+	gun_model.Render();
+	sword_model.Render();
 	//世界の軸を表示
 	for (int i = -5; i <= 5; i++) {
 		Utility::DrawLine(CVector3D(-5, 0, i * 1.0f), CVector3D(5, 0, i * 1.0f), CVector4D(0.2, 0.2, 0.2, 1));
@@ -195,7 +194,6 @@ void MainLoop(void) {
 	Utility::DrawLine(CVector3D(0, 0, 0), CVector3D(0, 0, 100), CVector4D(0, 0, 1, 1));
 
 	FONT_T()->Draw(0, 24, 1, 0, 0, "右クリック：武器切替");
-
 }
 
 void Init(void)
@@ -270,14 +268,14 @@ void Init(void)
 
 	//モデルの読み込み
 	ADD_RESOURCE("Antman", CModel::CreateModel("Charactor/antman/antman.a3m"));
-
+	ADD_RESOURCE("Scar", CModel::CreateModel("Wepon/Scar/Scar.obj"));
+	ADD_RESOURCE("Sword", CModel::CreateModel("Wepon/Sword/Sword.obj"));
 
 
 	//モデル複製
 	model = COPY_RESOURCE("Antman", CModelA3M);
-
-
-
+	gun_model = COPY_RESOURCE("Scar", CModelObj);
+	sword_model = COPY_RESOURCE("Sword", CModelObj);
 }
 
 

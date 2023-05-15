@@ -15,7 +15,7 @@
     <ClInclude Include="Global.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="12_TPS.cpp" />
+    <ClCompile Include="13_Wepon.cpp" />
     <ClCompile Include="Base\Base.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

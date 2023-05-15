@@ -1,2 +1,121 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8028: 中間ディレクトリ (C:\AnabukiSchool\GC2_C++\BaseProject\Project\Debug\) に別のプロジェクト (GLLibrary.vcxproj) と共有されているファイルが含まれています。これにより、クリーンしてリビルド動作が適切に行われない可能性があります。
+  13_Wepon.cpp
+C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\13_Wepon.cpp(45,51): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\13_Wepon.cpp(120,17): warning C4244: '初期化中': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\13_Wepon.cpp(124,35): warning C4244: '引数': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\13_Wepon.cpp(124,20): warning C4244: '引数': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\13_Wepon.cpp(189,102): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\13_Wepon.cpp(190,102): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\13_Wepon.cpp(298,42): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\13_Wepon.cpp(298,39): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+  glew.lib(glew.obj) : MSIL .netmodule または /GL を伴ってコンパイルされたモジュールが見つかりました。/LTCG を使用して再開始してください。リンカーのパフォーマンスを向上させるためには、コマンドラインに /LTCG を追加してください。
+GLFW.lib(init.obj) : warning LNK4099: PDB '' が 'GLFW.lib(init.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(window.obj) : warning LNK4099: PDB '' が 'GLFW.lib(window.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(input.obj) : warning LNK4099: PDB '' が 'GLFW.lib(input.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(context.obj) : warning LNK4099: PDB '' が 'GLFW.lib(context.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(win32_init.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_init.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(win32_monitor.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_monitor.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(win32_time.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_time.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(monitor.obj) : warning LNK4099: PDB '' が 'GLFW.lib(monitor.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(vulkan.obj) : warning LNK4099: PDB '' が 'GLFW.lib(vulkan.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(win32_window.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_window.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(win32_tls.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_tls.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(win32_joystick.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_joystick.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(wgl_context.obj) : warning LNK4099: PDB '' が 'GLFW.lib(wgl_context.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(egl_context.obj) : warning LNK4099: PDB '' が 'GLFW.lib(egl_context.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+LINK : warning LNK4075: /INCREMENTAL は /LTCG の指定によって無視されます。
+     ライブラリ C:\AnabukiSchool\GC2_C++\BaseProject\Project\/../Game/GameProject.lib とオブジェクト C:\AnabukiSchool\GC2_C++\BaseProject\Project\/../Game/GameProject.exp を作成中
+LINK : warning LNK4098: defaultlib 'LIBCMT' は他のライブラリの使用と競合しています。/NODEFAULTLIB:library を使用してください。
+  コード生成しています。
+  コード生成が終了しました。
+GLFW.lib(init.obj) : warning LNK4099: PDB '' が 'GLFW.lib(init.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(window.obj) : warning LNK4099: PDB '' が 'GLFW.lib(window.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(input.obj) : warning LNK4099: PDB '' が 'GLFW.lib(input.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(context.obj) : warning LNK4099: PDB '' が 'GLFW.lib(context.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(win32_init.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_init.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(win32_monitor.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_monitor.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(win32_time.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_time.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(monitor.obj) : warning LNK4099: PDB '' が 'GLFW.lib(monitor.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(vulkan.obj) : warning LNK4099: PDB '' が 'GLFW.lib(vulkan.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(win32_window.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_window.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(win32_tls.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_tls.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(win32_joystick.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_joystick.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(wgl_context.obj) : warning LNK4099: PDB '' が 'GLFW.lib(wgl_context.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(egl_context.obj) : warning LNK4099: PDB '' が 'GLFW.lib(egl_context.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+ftgl_static_D.lib(FTFont.obj) : warning LNK4099: PDB '' が 'ftgl_static_D.lib(FTFont.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+ftgl_static_D.lib(FTPixmapFont.obj) : warning LNK4099: PDB '' が 'ftgl_static_D.lib(FTPixmapFont.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+ftgl_static_D.lib(FTSize.obj) : warning LNK4099: PDB '' が 'ftgl_static_D.lib(FTSize.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+ftgl_static_D.lib(FTFace.obj) : warning LNK4099: PDB '' が 'ftgl_static_D.lib(FTFace.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+ftgl_static_D.lib(FTGlyphContainer.obj) : warning LNK4099: PDB '' が 'ftgl_static_D.lib(FTGlyphContainer.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+ftgl_static_D.lib(FTPixmapGlyph.obj) : warning LNK4099: PDB '' が 'ftgl_static_D.lib(FTPixmapGlyph.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+ftgl_static_D.lib(FTLibrary.obj) : warning LNK4099: PDB '' が 'ftgl_static_D.lib(FTLibrary.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+ftgl_static_D.lib(FTCharmap.obj) : warning LNK4099: PDB '' が 'ftgl_static_D.lib(FTCharmap.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+ftgl_static_D.lib(FTGlyph.obj) : warning LNK4099: PDB '' が 'ftgl_static_D.lib(FTGlyph.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(ftbase.obj) : warning LNK4099: PDB '' が 'freetyped.lib(ftbase.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(ftinit.obj) : warning LNK4099: PDB '' が 'freetyped.lib(ftinit.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(ftsystem.obj) : warning LNK4099: PDB '' が 'freetyped.lib(ftsystem.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(autofit.obj) : warning LNK4099: PDB '' が 'freetyped.lib(autofit.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(truetype.obj) : warning LNK4099: PDB '' が 'freetyped.lib(truetype.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(type1.obj) : warning LNK4099: PDB '' が 'freetyped.lib(type1.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(cff.obj) : warning LNK4099: PDB '' が 'freetyped.lib(cff.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(type1cid.obj) : warning LNK4099: PDB '' が 'freetyped.lib(type1cid.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(pfr.obj) : warning LNK4099: PDB '' が 'freetyped.lib(pfr.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(type42.obj) : warning LNK4099: PDB '' が 'freetyped.lib(type42.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(winfnt.obj) : warning LNK4099: PDB '' が 'freetyped.lib(winfnt.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(pcf.obj) : warning LNK4099: PDB '' が 'freetyped.lib(pcf.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(bdf.obj) : warning LNK4099: PDB '' が 'freetyped.lib(bdf.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(psaux.obj) : warning LNK4099: PDB '' が 'freetyped.lib(psaux.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(psnames.obj) : warning LNK4099: PDB '' が 'freetyped.lib(psnames.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(pshinter.obj) : warning LNK4099: PDB '' が 'freetyped.lib(pshinter.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(sfnt.obj) : warning LNK4099: PDB '' が 'freetyped.lib(sfnt.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(smooth.obj) : warning LNK4099: PDB '' が 'freetyped.lib(smooth.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(raster.obj) : warning LNK4099: PDB '' が 'freetyped.lib(raster.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(sdf.obj) : warning LNK4099: PDB '' が 'freetyped.lib(sdf.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(ftgzip.obj) : warning LNK4099: PDB '' が 'freetyped.lib(ftgzip.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(ftlzw.obj) : warning LNK4099: PDB '' が 'freetyped.lib(ftlzw.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(ftbitmap.obj) : warning LNK4099: PDB '' が 'freetyped.lib(ftbitmap.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+freetyped.lib(ftdebug.obj) : warning LNK4099: PDB '' が 'freetyped.lib(ftdebug.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+alut.lib(alutInit.obj) : warning LNK4099: PDB '' が 'alut.lib(alutInit.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+alut.lib(alutLoader.obj) : warning LNK4099: PDB '' が 'alut.lib(alutLoader.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+alut.lib(alutError.obj) : warning LNK4099: PDB '' が 'alut.lib(alutError.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+alut.lib(alutCodec.obj) : warning LNK4099: PDB '' が 'alut.lib(alutCodec.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+alut.lib(alutInputStream.obj) : warning LNK4099: PDB '' が 'alut.lib(alutInputStream.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+alut.lib(alutBufferData.obj) : warning LNK4099: PDB '' が 'alut.lib(alutBufferData.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+alut.lib(alutUtil.obj) : warning LNK4099: PDB '' が 'alut.lib(alutUtil.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glew.lib(glew.obj) : warning LNK4099: PDB '' が 'glew.lib(glew.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpngd.lib(glpng.obj) : warning LNK4099: PDB '' が 'glpngd.lib(glpng.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpngd.lib(pngrtran.obj) : warning LNK4099: PDB '' が 'glpngd.lib(pngrtran.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpngd.lib(png.obj) : warning LNK4099: PDB '' が 'glpngd.lib(png.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpngd.lib(pngread.obj) : warning LNK4099: PDB '' が 'glpngd.lib(pngread.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpngd.lib(pngget.obj) : warning LNK4099: PDB '' が 'glpngd.lib(pngget.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpngd.lib(pngmem.obj) : warning LNK4099: PDB '' が 'glpngd.lib(pngmem.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpngd.lib(pngtrans.obj) : warning LNK4099: PDB '' が 'glpngd.lib(pngtrans.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpngd.lib(pngerror.obj) : warning LNK4099: PDB '' が 'glpngd.lib(pngerror.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpngd.lib(crc32.obj) : warning LNK4099: PDB '' が 'glpngd.lib(crc32.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpngd.lib(inflate.obj) : warning LNK4099: PDB '' が 'glpngd.lib(inflate.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpngd.lib(pngrutil.obj) : warning LNK4099: PDB '' が 'glpngd.lib(pngrutil.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpngd.lib(pngrio.obj) : warning LNK4099: PDB '' が 'glpngd.lib(pngrio.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpngd.lib(zutil.obj) : warning LNK4099: PDB '' が 'glpngd.lib(zutil.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpngd.lib(infblock.obj) : warning LNK4099: PDB '' が 'glpngd.lib(infblock.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpngd.lib(adler32.obj) : warning LNK4099: PDB '' が 'glpngd.lib(adler32.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpngd.lib(pngset.obj) : warning LNK4099: PDB '' が 'glpngd.lib(pngset.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpngd.lib(infutil.obj) : warning LNK4099: PDB '' が 'glpngd.lib(infutil.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpngd.lib(inftrees.obj) : warning LNK4099: PDB '' が 'glpngd.lib(inftrees.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpngd.lib(infcodes.obj) : warning LNK4099: PDB '' が 'glpngd.lib(infcodes.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpngd.lib(inffast.obj) : warning LNK4099: PDB '' が 'glpngd.lib(inffast.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+LINK : warning LNK4286: シンボル '??0FTPoint@@QEAA@XZ (public: __cdecl FTPoint::FTPoint(void))' ('ftgl_static_D.lib(FTFont.obj)' で定義) が 'GLLibrary.lib(CFont.obj)' によってインポートされています
+LINK : warning LNK4286: シンボル '??0FTPixmapFont@@QEAA@PEBD@Z (public: __cdecl FTPixmapFont::FTPixmapFont(char const *))' ('ftgl_static_D.lib(FTPixmapFont.obj)' で定義) が 'GLLibrary.lib(CFont.obj)' によってインポートされています
+LINK : warning LNK4286: シンボル '??1FTPixmapFont@@UEAA@XZ (public: virtual __cdecl FTPixmapFont::~FTPixmapFont(void))' ('ftgl_static_D.lib(FTPixmapFont.obj)' で定義) が 'GLLibrary.lib(CFont.obj)' によってインポートされています
+LINK : warning LNK4286: シンボル 'alcCreateContext' ('OpenAL32.lib(ALc.obj)' で定義) が 'alut.lib(alutInit.obj)' によってインポートされています
+LINK : warning LNK4286: シンボル 'alcMakeContextCurrent' ('OpenAL32.lib(ALc.obj)' で定義) が 'alut.lib(alutInit.obj)' によってインポートされています
+LINK : warning LNK4286: シンボル 'alcDestroyContext' ('OpenAL32.lib(ALc.obj)' で定義) が 'alut.lib(alutInit.obj)' によってインポートされています
+LINK : warning LNK4286: シンボル 'alcGetCurrentContext' ('OpenAL32.lib(ALc.obj)' で定義) が 'alut.lib(alutInit.obj)' によってインポートされています
+LINK : warning LNK4286: シンボル 'alcGetContextsDevice' ('OpenAL32.lib(ALc.obj)' で定義) が 'alut.lib(alutInit.obj)' によってインポートされています
+LINK : warning LNK4286: シンボル 'alcOpenDevice' ('OpenAL32.lib(ALc.obj)' で定義) が 'alut.lib(alutInit.obj)' によってインポートされています
+LINK : warning LNK4286: シンボル 'alcCloseDevice' ('OpenAL32.lib(ALc.obj)' で定義) が 'alut.lib(alutInit.obj)' によってインポートされています
+LINK : warning LNK4286: シンボル 'alcGetError' ('OpenAL32.lib(ALc.obj)' で定義) が 'alut.lib(alutInit.obj)' によってインポートされています
+LINK : warning LNK4286: シンボル 'alGetError' ('OpenAL32.lib(alError.obj)' で定義) が 'alut.lib(alutInit.obj)' によってインポートされています
+LINK : warning LNK4286: シンボル 'alGetError' ('OpenAL32.lib(alError.obj)' で定義) が 'alut.lib(alutBufferData.obj)' によってインポートされています
+LINK : warning LNK4286: シンボル 'alGenBuffers' ('OpenAL32.lib(alBuffer.obj)' で定義) が 'alut.lib(alutBufferData.obj)' によってインポートされています
+LINK : warning LNK4286: シンボル 'alBufferData' ('OpenAL32.lib(alBuffer.obj)' で定義) が 'alut.lib(alutBufferData.obj)' によってインポートされています
   GameProject.vcxproj -> C:\AnabukiSchool\GC2_C++\BaseProject\Game\GameProject.exe
