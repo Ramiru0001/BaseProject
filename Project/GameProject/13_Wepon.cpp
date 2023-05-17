@@ -175,15 +175,16 @@ void MainLoop(void) {
 		gun_matrix = model.GetFrameMatrix(31)*CMatrix::MTranselate(-18.00f,-5.00f,8.600)*CMatrix::MRotationX(DtoR(0))*CMatrix::MRotationY(DtoR(- 90))*CMatrix::MRotationZ(DtoR(-90))*CMatrix::MScale(1.0f,1.0f,1.0f);
 		//行列を指定して描画
 		gun_model.Render(gun_matrix);
-
+		sword_matrix = model.GetFrameMatrix(3)*CMatrix::MTranselate(-18,-5,-21) * CMatrix::MRotationX(DtoR(48)) * CMatrix::MRotationY(DtoR(-102)) * CMatrix::MRotationZ(DtoR(-90)) * CMatrix::MScale(0.5f, 0.5f, 0.5f);
+		sword_model.Render(sword_matrix);
 	}else{
 		//ACT
-
-
+		sword_matrix = model.GetFrameMatrix(31) * CMatrix::MTranselate(-10.4, -5.3, -3.6)*CMatrix::MRotationX(DtoR(0)) * CMatrix::MRotationY(DtoR(0)) * CMatrix::MRotationZ(DtoR(0)) * CMatrix::MScale(0.5f, 0.5f, 0.5f);
+		sword_model.Render(sword_matrix);
 	}
 	//行列を指定して描画
-	gun_model.Render();
-	sword_model.Render();
+	//gun_model.Render();
+	//sword_model.Render();
 	//世界の軸を表示
 	for (int i = -5; i <= 5; i++) {
 		Utility::DrawLine(CVector3D(-5, 0, i * 1.0f), CVector3D(5, 0, i * 1.0f), CVector4D(0.2, 0.2, 0.2, 1));
@@ -258,8 +259,6 @@ void Init(void)
 	CShader::GetInstance("StaticMesh");
 	CShader::GetInstance("SkinMesh");
 	CSound::GetInstance();
-	
-
 
 	//-----------------------------------------------------
 	//初期化の命令を書く

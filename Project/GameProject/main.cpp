@@ -2,9 +2,10 @@
 //ÉOÉçÅ[ÉoÉãïœêîóÃàÊ
 //-------------------------------------------
 #include "Base/Base.h"
-#include "Game(P1)/Player.h"
-#include "Game(P1)/Enemy.h"
-#include "Game/FollowCamera.h"
+#include "Game(P3)/Player.h"
+#include "Game(P3)/Enemy.h"
+#include "Game(P3)/Bullet.h"
+#include "Game(P3)/TPSCamera.h"
 
 void MainLoop(void) {
 	//--------------------------------------------------------------
@@ -97,9 +98,8 @@ void Init(void)
 	//-----------------------------------------------------
 	ADD_RESOURCE("Antman", CModel::CreateModel("Charactor/antman/antman.a3m"));
 	ADD_RESOURCE("Golem", CModel::CreateModel("Charactor/golem/golem.a3m"));
-	Base::Add(new Player(CVector3D(0, 0, 0)));
+	//Base::Add(new Player(CVector3D(0, 0, 0)));
 	Base::Add(new Enemy(CVector3D(0, 0, 10)));
-	Base::Add(new FollowCamera());
 }
 
 

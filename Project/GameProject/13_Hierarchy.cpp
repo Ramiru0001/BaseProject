@@ -44,15 +44,16 @@ void MainLoop(void) {
 	const float move_accel = 0.02f;
 
 	//‰ñ“]‘¬“x
-	const float rot_speed = 0.001f;
+	const float rot_speed = 0.01f;
 
 	//–C“ƒAå–C‚Ì‰ñ“]
-
-
-
-
-
-
+	//Y²‰ñ“]
+	//–C“ƒ‰ñ“]
+	CVector2D mouse_vec = CInput::GetMouseVec();
+	tank_rot[eTop].y += mouse_vec.x * -rot_speed;
+	//å–C‰ñ“]
+	tank_rot[eCannon].x += mouse_vec.y * rot_speed;
+	tank_rot[eCannon].x = min(DtoR(0),max(DtoR(-30.0f), tank_rot[eCannon].x));
 	//‰ñ“]Œ¸‘¬ˆ—
 	rot_vec *= 0.9f;
 	//ˆÚ“®Œ¸‘¬ˆ—
@@ -81,30 +82,23 @@ void MainLoop(void) {
 			move_vec += tank_matrix[eBottom].GetFront() * move_accel;
 		}
 	}
-
-
 	//-------------------------------------------------
 	//íÔ‚Ìs—ñ‚ğİ’è‚·‚é
 	//šŠK‘w\‘¢‚ğ\’z‚·‚é@[e~q](Šeƒp[ƒc‚Ìs—ñ‚Í•½sˆÚ“®~‰ñ“]‚Ì‡‚Åì‚é)
 	tank_matrix[eBottom] =
 		CMatrix::MTranselate(tank_pos[eBottom]) *
 		CMatrix::MRotation(tank_rot[eBottom]);
-
-
-
+	tank_matrix[eTop] = tank_matrix[eBottom] * CMatrix::MRotation(tank_rot[eTop]);
+	tank_matrix[eCannon] = tank_matrix[eTop] * CMatrix::MTranselate(tank_pos[eCannon]) * CMatrix::MRotation(tank_rot[eCannon]);
 	//-----------------------------------------------------
 	//ƒJƒƒ‰‚Ìs—ñ
-	
-	
-	
+	CMatrix camera_matrix = tank_matrix[eTop] * CMatrix::MTranselate(0, 6.0f, -10.0f);
+	CCamera::GetCurrent()->SetTranseRot(camera_matrix);
 	//-----------------------------------------------------
-
-
 	//s—ñ‚ğw’è‚µ‚Ä•`‰æ
 	for (int i = 0; i < ePartsMax; i++) {
 		tank_model[i].Render(tank_matrix[i]);
 	}
-
 	//¢ŠE‚Ì²‚ğ•\¦
 	for (int i = -5; i <= 5; i++) {
 		Utility::DrawLine(CVector3D(-5, 0, i * 1.0f), CVector3D(5, 0, i * 1.0f), CVector4D(0.2, 0.2, 0.2, 1));
@@ -113,9 +107,7 @@ void MainLoop(void) {
 	Utility::DrawLine(CVector3D(0, 0, 0), CVector3D(100, 0, 0), CVector4D(1, 0, 0, 1));
 	Utility::DrawLine(CVector3D(0, 0, 0), CVector3D(0, 100, 0), CVector4D(0, 1, 0, 1));
 	Utility::DrawLine(CVector3D(0, 0, 0), CVector3D(0, 0, 100), CVector4D(0, 0, 1, 1));
-
 }
-
 void Init(void)
 {
 	glClearColor(1.0, 1.0, 1.0, 1.0);
