@@ -1,11 +1,11 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8028: 中間ディレクトリ (C:\AnabukiSchool\GC2_C++\BaseProject\Project\Debug\) に別のプロジェクト (GLLibrary.vcxproj) と共有されているファイルが含まれています。これにより、クリーンしてリビルド動作が適切に行われない可能性があります。
-  Enemy.cpp
-C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\Game(P3)\Enemy.cpp(9,33): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+  TPSCamera.cpp
+C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\Game(P3)\TPSCamera.cpp(14,162): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
   main.cpp
 C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\main.cpp(25,102): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
 C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\main.cpp(26,102): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\main.cpp(122,42): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\main.cpp(122,39): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\main.cpp(123,42): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\AnabukiSchool\GC2_C++\BaseProject\Project\GameProject\main.cpp(123,39): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
   コードを生成中...
 GLFW.lib(init.obj) : warning LNK4099: PDB '' が 'GLFW.lib(init.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(window.obj) : warning LNK4099: PDB '' が 'GLFW.lib(window.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。

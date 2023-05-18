@@ -98,8 +98,9 @@ void Init(void)
 	//-----------------------------------------------------
 	ADD_RESOURCE("Antman", CModel::CreateModel("Charactor/antman/antman.a3m"));
 	ADD_RESOURCE("Golem", CModel::CreateModel("Charactor/golem/golem.a3m"));
-	//Base::Add(new Player(CVector3D(0, 0, 0)));
-	Base::Add(new Enemy(CVector3D(0, 0, 10)));
+	Base::Add(new Player(CVector3D(0, 0, 0)));
+	Base::Add(new Enemy(CVector3D(0, 0, -10)));
+	Base::Add(new TPSCamera());
 }
 
 

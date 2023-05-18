@@ -61,10 +61,6 @@ void MainLoop(void) {
 	CVector3D key_dir(0, 0, 0);
 	//キャラクターの移動量
 	const float move_speed = 0.1f;
-
-
-
-	
 	//キャラクターの回転値をカメラの回転値に合わせる
 	rot.y = cam_rot.y;
 
