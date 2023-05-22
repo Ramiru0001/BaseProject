@@ -2,6 +2,7 @@
 #include "Game(P3)/Player.h"
 #include "Game(P3)/Enemy.h"
 #include "Game(P3)/TPSCamera.h"
+#include "Game(P3)/Bullet.h"
 
 //--------------------------------------------
 //グローバル変数領域
@@ -99,9 +100,12 @@ void Init(void)
 	//初期化の命令を書く
 	//ゲーム起動時に一度だけ呼ばれる
 	//-----------------------------------------------------
-
-	
-
+	ADD_RESOURCE("Antman", CModel::CreateModel("Charactor/antman/antman.a3m"));
+	ADD_RESOURCE("Golem", CModel::CreateModel("Charactor/golem/golem.a3m"));
+	ADD_RESOURCE("Scar", CModel::CreateModel("Wepon/Scar/Scar.obj"));
+	Base::Add(new Player(CVector3D(0, 0, 0)));
+	Base::Add(new Enemy(CVector3D(0, 0, -10)));
+	Base::Add(new TPSCamera());
 }
 
 

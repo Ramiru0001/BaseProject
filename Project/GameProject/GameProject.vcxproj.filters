@@ -42,6 +42,6 @@
     <ClCompile Include="Game(P3)\TPSCamera.cpp">
       <Filter>Game</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="14_Practice3.cpp" />
   </ItemGroup>
 </Project>

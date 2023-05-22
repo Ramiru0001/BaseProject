@@ -19,12 +19,12 @@
     <ClInclude Include="Global.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="14_Practice3.cpp" />
     <ClCompile Include="Base\Base.cpp" />
     <ClCompile Include="Game(P3)\Bullet.cpp" />
     <ClCompile Include="Game(P3)\Enemy.cpp" />
     <ClCompile Include="Game(P3)\Player.cpp" />
     <ClCompile Include="Game(P3)\TPSCamera.cpp" />
-    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{FE2CE3B1-49BF-46A5-9DB1-9BD5B52FE1A0}</ProjectGuid>
