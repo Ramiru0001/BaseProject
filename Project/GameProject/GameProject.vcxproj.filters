@@ -18,6 +18,8 @@
     <ClCompile Include="Base\Base.cpp">
       <Filter>Base</Filter>
     </ClCompile>
-    <ClCompile Include="15_Field.cpp" />
+    <ClCompile Include="16_Dangeron.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

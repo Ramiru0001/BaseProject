@@ -144,7 +144,7 @@ void MainLoop(void) {
 
 
 	//キャラクター表示
-	model.SetPos(pos);
+	model->SetPos(pos);
 	model.SetRot(rot);
 	model.SetScale(0.01f, 0.01f, 0.01f);
 	model.Render();
