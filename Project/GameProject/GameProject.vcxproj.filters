@@ -18,7 +18,7 @@
     <ClCompile Include="Base\Base.cpp">
       <Filter>Base</Filter>
     </ClCompile>
-    <ClCompile Include="16_Dangeron.cpp">
+    <ClCompile Include="18_CollisionSphereAndCapsule.cpp">
       <Filter>Game</Filter>
     </ClCompile>
   </ItemGroup>
