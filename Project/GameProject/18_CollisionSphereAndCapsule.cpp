@@ -82,7 +82,7 @@ void MainLoop(void) {
 	//カプセル高さ
 	float height = 1.8;
 	//カプセル始点
-	lineS - pos + CVector3D(0, height - rad, 0);
+	lineS = pos + CVector3D(0, height - rad, 0);
 	//カプセル終点
 	lineE = pos + CVector3D(0, rad, 0);
 
@@ -117,16 +117,26 @@ void MainLoop(void) {
 			//めり込み量
 			float s = (rad + c_rad) - dist;
 			//プレイヤー->テスツカプセル方向へめり込んだ分押し戻す
-			c_s += dir1 * s;
-			c_e += dir1 * s;
+			c_s += dir1 * s * 0.5f;
+			c_e += dir1 * s * 0.5f;
+			pos += dir2 * s * 0.5f;
+
 		}
 	}
 	{
 		//■プレイヤーのカプセルとテスト球の接触
-
-
-
-
+		//カプセル状の球との最近点
+		//カプセルから球への方向
+		CVector3D cross, dir;
+		//カプセルと球との距離
+		float dist;
+		//カプセルと球との衝突
+		if (CCollision::CollisionCapsuleShpere(lineS, lineE, rad, s_pos, s_rad, &dist, &cross, &dir)) {
+			//めり込み量
+			float s = (rad + s_rad) - dist;
+			//カプセル->球の方向へめり込んだ分押し戻す
+			s_pos += dir * s;
+		}
 	}
 	//---------------------------------------
 	//カメラ
@@ -172,7 +182,7 @@ void MainLoop(void) {
 
 
 	//テスト球の表示
-	//Utility::DrawSphere(s_pos, s_rad, CVector4D(0, 1, 0, 1));
+	Utility::DrawSphere(s_pos, s_rad, CVector4D(0, 1, 0, 1));
 	//テストカプセルの表示
 	Utility::DrawCapsule(c_s, c_e, c_rad, CVector4D(0, 0, 1, 1));
 
