@@ -15,7 +15,6 @@
     <ClInclude Include="Global.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="19_CollisionOBB.cpp" />
     <ClCompile Include="Base\Base.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
