@@ -15,6 +15,7 @@
     <ClInclude Include="Global.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="20_CreatModel.cpp" />
     <ClCompile Include="Base\Base.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

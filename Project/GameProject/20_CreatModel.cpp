@@ -2,7 +2,7 @@
 //グローバル変数領域
 //-------------------------------------------
 CModelA3M model;
-
+CModelObj stage;
 
 
 void MainLoop(void) {
@@ -12,13 +12,15 @@ void MainLoop(void) {
 	//--------------------------------------------------------------
 
 	//アニメーション設定
-	model.ChangeAnimation(0);
+	model.ChangeAnimation(1);
 	//アニメーション更新
 	model.UpdateAnimation();
 	//大きさ設定
 	model.SetScale(0.01f, 0.01f, 0.01f);
 	//描画
 	model.Render();
+	//stage.SetScale(0.1f, 0.1f, 0.1f);
+	stage.Render();
 
 	//世界の軸を表示
 	Utility::DrawLine(CVector3D(0, 0, 0), CVector3D(100, 0, 0), CVector4D(1, 0, 0, 1));
@@ -99,9 +101,11 @@ void Init(void)
 	//ゲーム起動時に一度だけ呼ばれる
 	//-----------------------------------------------------
 	//モデルの読み込み
-	ADD_RESOURCE("Model", CModel::CreateModel("Charactor/xxx/xxx.a3m"));
+	ADD_RESOURCE("Model", CModel::CreateModel("Charactor/GirlModel/GirlModel.a3m"));
 	//モデル複製
 	model = COPY_RESOURCE("Model", CModelA3M);
+	ADD_RESOURCE("Stage", CModel::CreateModel("Field/MyArea/Area.obj"));
+	stage = COPY_RESOURCE("Stage", CModelObj);
 
 
 }
