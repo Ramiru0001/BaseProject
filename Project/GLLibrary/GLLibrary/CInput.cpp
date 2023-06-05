@@ -76,7 +76,12 @@ bool CInput::Init(){
 
 
 }
+void CInput::ClearInstance() {
 
+	if (m_pMouse) m_pMouse->Release();
+	if(m_pDinput) m_pDinput->Release();
+	m_pDinput = nullptr;
+}
 void CInput::SetMouseInside(bool f) {
 	m_mouse_inside = f;
 	UpdateClipCursor(true);

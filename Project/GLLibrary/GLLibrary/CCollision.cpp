@@ -749,6 +749,16 @@ float CCollision::DistanceLine(const CVector3D &s1,const CVector3D &e1,const CVe
 
 				return fabsf(l);
 		}
+	} else {
+		//二つの線分が平行な場合
+	//	CVector3D l_dir = (e1 - s1).GetNormalize();
+	//	CVector3D v = CVector3D::Cross(s2 - s1, l_dir);
+	//	CVector3D d = CVector3D::Cross(l_dir,v.GetNormalize());
+	//	if (dir1) *dir1 = d;
+	//	if (dir2) *dir2 = -d;
+	//	if (c1) *c1 = s1;
+	//	if (c2) *c2 = s2;
+	//	return v.Length();
 	}
 	//始点と終点から線分との距離を求め、もっとも短い距離を返す
 	CVector3D cross[4];
@@ -758,14 +768,15 @@ float CCollision::DistanceLine(const CVector3D &s1,const CVector3D &e1,const CVe
 	length[1] = DistancePointToLineSq(s2, e2, e1, &cross[1], &dir[1]);
 	length[2] = DistancePointToLineSq(s1, e1, s2, &cross[2], &dir[2]);
 	length[3] = DistancePointToLineSq(s1, e1, e2, &cross[3], &dir[3]);
-	float* pl = &length[0];
-	CVector3D* pc = &cross[0];
+	
 	int idx = 0;
 	for(int i=1;i<4;i++){
 		if (length[idx] > length[i]) {
 			idx = i;
 		}
 	}
+	float* pl = &length[idx];
+	CVector3D* pc = &cross[idx];
 	if (c1 || c2 || dir1 || dir2){
 		if (c1) {
 			if (idx == 0)

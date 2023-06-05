@@ -111,7 +111,7 @@ public:
 	int GetIndex(int x, int y, int z) const{
 		return x + (z * m_cut.ix) + (y * m_cut.iz * m_cut.ix);
 	}
-	void CalcRange(CVector3D* min, CVector3D* max,const CAABB aabb)const;
+	void CalcRange(CVector3D* min, CVector3D* max,const CAABB& aabb)const;
 };
 /*
 ポリゴンクラス
@@ -208,6 +208,9 @@ struct CA3MAnimationKey {
 struct CA3MAnimationAction {
 	int m_size;
 	CA3MAnimationKey* m_keys;
+	~CA3MAnimationAction() {
+		delete[] m_keys;
+	}
 };
 
 struct CA3MAnimationSet {
@@ -222,6 +225,12 @@ struct CA3MAnimationSet {
 	};
 	int m_end_base;
 	std::map<int, CA3MAnimationAction*> m_bones;
+	~CA3MAnimationSet() {
+		for (auto& a : m_bones) {
+			delete a.second;
+		}
+		m_bones.clear();
+	}
 };
 /*
 	アニメーション

@@ -299,6 +299,12 @@ CShader* CShader::GetInstance(std::string type)
 	if (!m_instances[type]) m_instances[type] = new CShader(type);
 	return m_instances[type];
 }
+void CShader::ClearInstance()
+{
+	for (auto& s : m_instances)
+		delete s.second;
+	m_instances.clear();
+}
 CShader* CShader::CreateInstance(std::string type)
 {
 	return new CShader(type);

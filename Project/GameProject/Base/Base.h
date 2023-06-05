@@ -20,7 +20,7 @@ public:
 	CVector3D	m_vec;		//移動ベクトル
 	CVector3D	m_dir;		//前方向
 	int		m_kill;		//削除フラグ
-	/*
+	
 	//球、カプセル用
 	float		m_rad;		//半径
 	//カプセル用
@@ -28,7 +28,7 @@ public:
 	CVector3D	m_lineE;	//線分終点
 	//OBB用
 	COBB m_obb;
-	*/
+	
 
 	//攻撃の連続ヒット防止措置
 	int m_hit_no;			//攻撃ヒット側番号

@@ -156,6 +156,7 @@ void CA3MNode::Release()
 	}
 	if (mp_mesh) {
 		mp_mesh->Release();
+		delete mp_mesh;
 	}
 }
 
@@ -198,7 +199,7 @@ CA3MNode* CA3MNode::FindNode(const int no, CA3MNode* n) {
 	return find;
 }
 
-CA3MPoly::CA3MPoly(unsigned int* use_skin):mp_vertex(nullptr),mp_use_skin(use_skin),m_vertex_cnt(0),m_material(0),m_buffer(0) {
+CA3MPoly::CA3MPoly(unsigned int* use_skin):mp_vertex(nullptr),mp_use_skin(use_skin),m_vertex_cnt(0),m_material(0),m_buffer(0), m_colIdex(nullptr), m_colmask(nullptr){
 
 }
 CA3MPoly::~CA3MPoly()
@@ -207,6 +208,7 @@ CA3MPoly::~CA3MPoly()
 	//	glDeleteVertexArrays(1, &vao);
 	if(mp_vertex) delete[] mp_vertex;
 	if (m_colIdex) delete[] m_colIdex;
+	if (m_colmask) delete[] m_colmask;
 }
 int CA3MPoly::Load(const char* buf)
 {
@@ -648,6 +650,7 @@ void CA3MMesh::Release()
 	for (auto it = m_poly_list.begin(); it != m_poly_list.end(); it++) {
 		if (*it) delete (*it);
 	}
+	m_poly_list.clear();
 
 }
 
@@ -998,7 +1001,8 @@ void CModelA3M::CalcBoneMatrix(CA3MNode* node)
 
 	if (m_bone_matrix && node->m_bone_no >= 0) {
 		//		m_bone_matrix[node->m_bone_no] = node->m_matrix *node->m_offset;
-		float t = m_animation[node->m_animation_layer].m_blend;
+		float t = 1.0f;
+		if(m_animation.size()>0) t = m_animation[node->m_animation_layer].m_blend;
 		m_bone_matrix[node->m_bone_no] = m_old_matrix[node->m_bone_no] * (1 - t) + node->m_matrix * t;
 	}
 	if (node->mp_child) CalcBoneMatrix(node->mp_child);
@@ -1088,7 +1092,8 @@ CModelA3M::CModelA3M(): mp_root(nullptr), m_bone_num(0), m_send_matrix(nullptr),
 }
 
 CModelA3M::~CModelA3M()
-{
+{	
+	if (mp_root) delete mp_root;
 	if (m_send_matrix) delete[] m_send_matrix;
 	if (m_bone_matrix) delete[] m_bone_matrix;
 	if (m_old_matrix) delete[] m_old_matrix;
@@ -2428,6 +2433,9 @@ void CModelA3M::Release()
 		(*it)->Release();
 		delete *it;
 	}
+	while (m_animation_size > 0)
+		RemoveAnimation(m_animation_size - 1);
+
 	m_material_list.clear();
 	m_animation.clear();
 	m_enable_animation = false;
@@ -3001,16 +3009,16 @@ CA3MColl::CA3MColl():m_max(FLT_MIN, FLT_MIN, FLT_MIN),m_min(FLT_MAX, FLT_MAX, FL
 CA3MColl::~CA3MColl()
 {
 	if (m_colmin) {
-		delete[] m_colmin;
+		delete m_colmin;
 		m_colmin = nullptr;
 	}
 	if (m_colmax) {
-		delete[] m_colmax;
+		delete m_colmax;
 		m_colmax = nullptr;
 	}
 }
 
-void CA3MColl::CalcRange(CVector3D* min, CVector3D* max, const CAABB aabb)const
+void CA3MColl::CalcRange(CVector3D* min, CVector3D* max, const CAABB& aabb)const
 {
 		min->ix = max(0, min(m_cut.ix - 1, (int)((aabb.min.x - m_min.x) / m_length.x)));
 		max->ix = max(0, min(m_cut.ix - 1, (int)((aabb.max.x - m_min.x) / m_length.x)));

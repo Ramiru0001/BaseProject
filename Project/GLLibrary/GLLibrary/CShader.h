@@ -61,6 +61,10 @@ public:
 	static CShader* GetInstance(std::string type);
 
 	/*!
+		@brief	全てのシェーダーを破棄
+	**/
+	static void ClearInstance();
+	/*!
 		@brief	組み込み済みシェーダーの生成
 		@param type [in] 組み込みの種類
 		@retval	シェーダーインスタンス

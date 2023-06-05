@@ -501,6 +501,7 @@ CModelObj::~CModelObj() {
 		for (int i = 0; i < m_materialCnt; i++) {
 			delete m_material[i];
 		}
+		delete[] m_material;
 		m_material = nullptr;
 	}
 }
@@ -820,8 +821,10 @@ void CModelObj::Release() {
 		delete m_material[i];
 		m_mesh[i].Release();
 	}
+	delete[] m_material;
 	m_material = nullptr;
 	if (m_mesh) delete[] m_mesh;
+	m_mesh = nullptr;
 	//if (m_shader) delete m_shader;
 }
 

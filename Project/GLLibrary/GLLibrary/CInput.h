@@ -77,6 +77,7 @@ public:
 	static bool CALLBACK _padCallback(const LPDIDEVICEINSTANCE lpddi, LPVOID pvRef);
 public:
 	static bool Init();
+	static void ClearInstance();
 
 	/*!
 		@brief	ƒL[‚Ìó‘Ô‚ğŒŸ¸
