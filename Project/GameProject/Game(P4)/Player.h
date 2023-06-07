@@ -9,4 +9,6 @@ public:
 	Player(const CVector3D &pos);
 	void Update();
 	void Render();
+	void PushToMove();
+	void Collision(Base* b);
 };
