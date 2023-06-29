@@ -12,19 +12,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Base\Base.h" />
-    <ClInclude Include="Game(P4)\Enemy.h" />
-    <ClInclude Include="Game(P4)\Player.h" />
-    <ClInclude Include="Game(P4)\PlayerCamera.h" />
-    <ClInclude Include="Game(P4)\Stage.h" />
     <ClInclude Include="Global.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="21_Practice4.cpp" />
+    <ClCompile Include="30_RenderTexture.cpp" />
     <ClCompile Include="Base\Base.cpp" />
-    <ClCompile Include="Game(P4)\Enemy.cpp" />
-    <ClCompile Include="Game(P4)\Player.cpp" />
-    <ClCompile Include="Game(P4)\PlayerCamera.cpp" />
-    <ClCompile Include="Game(P4)\Stage.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{FE2CE3B1-49BF-46A5-9DB1-9BD5B52FE1A0}</ProjectGuid>

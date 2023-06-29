@@ -5,43 +5,16 @@
     <ClInclude Include="Base\Base.h">
       <Filter>Base</Filter>
     </ClInclude>
-    <ClInclude Include="Game(P4)\Enemy.h">
-      <Filter>Game%28P4%29</Filter>
-    </ClInclude>
-    <ClInclude Include="Game(P4)\Player.h">
-      <Filter>Game%28P4%29</Filter>
-    </ClInclude>
-    <ClInclude Include="Game(P4)\PlayerCamera.h">
-      <Filter>Game%28P4%29</Filter>
-    </ClInclude>
-    <ClInclude Include="Game(P4)\Stage.h">
-      <Filter>Game%28P4%29</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Base">
       <UniqueIdentifier>{e589ee0d-2edb-426d-8d90-417649a16188}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Game%28P4%29">
-      <UniqueIdentifier>{0f4d0130-64a2-41e0-a3ef-e7d036e42b8f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Base\Base.cpp">
       <Filter>Base</Filter>
     </ClCompile>
-    <ClCompile Include="21_Practice4.cpp" />
-    <ClCompile Include="Game(P4)\Enemy.cpp">
-      <Filter>Game%28P4%29</Filter>
-    </ClCompile>
-    <ClCompile Include="Game(P4)\Player.cpp">
-      <Filter>Game%28P4%29</Filter>
-    </ClCompile>
-    <ClCompile Include="Game(P4)\PlayerCamera.cpp">
-      <Filter>Game%28P4%29</Filter>
-    </ClCompile>
-    <ClCompile Include="Game(P4)\Stage.cpp">
-      <Filter>Game%28P4%29</Filter>
-    </ClCompile>
+    <ClCompile Include="30_RenderTexture.cpp" />
   </ItemGroup>
 </Project>
