@@ -15,6 +15,6 @@
     <ClCompile Include="Base\Base.cpp">
       <Filter>Base</Filter>
     </ClCompile>
-    <ClCompile Include="30_RenderTexture.cpp" />
+    <ClCompile Include="31_ShadowMap.cpp" />
   </ItemGroup>
 </Project>

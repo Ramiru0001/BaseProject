@@ -147,8 +147,8 @@ const char *mesh_frag = "#version 430\n\n"\
 "		float f = clamp((fogFar - l) / (fogFar - fogNear), 0.0, 1.0);\n"\
 "		float bias = 0.001;"
 /*シャドウマップ */
-"		//if ( vShadowCoord.z<1.0 && texture2D( depth_tex, vShadowCoord.xy).z  <  vShadowCoord.z-bias )\n"\
-"		//		visibility -= 0.8; \n"\
+"		if ( vShadowCoord.z<1.0 && texture2D( depth_tex, vShadowCoord.xy).z  <  vShadowCoord.z-bias )\n"\
+"				visibility -= 0.8; \n"\
 "		color = texColor.xyz * (visibility * Diffuse.xyz * clamp(D, 0.0, 1.0) + Ambient.xyz * clamp(A, 0.0, 1.0)) + visibility * Specular * clamp(S, 0.0, 1.0) + Emissive;\n"\
 "		out_color = vec4(color + fogColor.xyz * (1.0 - f), clamp((texColor.w * Diffuse.w * alpha) - ((1.0 - fogColor.w) * (1.0 - f)), 0.0f, 1.0f));\n"\
 "	}\n"\

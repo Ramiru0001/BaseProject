@@ -15,7 +15,7 @@
     <ClInclude Include="Global.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="30_RenderTexture.cpp" />
+    <ClCompile Include="31_ShadowMap.cpp" />
     <ClCompile Include="Base\Base.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
