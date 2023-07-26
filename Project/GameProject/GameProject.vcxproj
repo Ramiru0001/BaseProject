@@ -15,7 +15,7 @@
     <ClInclude Include="Global.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="31_ShadowMap.cpp" />
+    <ClCompile Include="32_ChangeMaterial.cpp" />
     <ClCompile Include="Base\Base.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
